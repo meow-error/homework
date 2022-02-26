@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="poi-5.2.0">
+    <CLASSES>
+      <root url="jar://D:/Java/poi-bin-5.2.0/poi-5.2.0.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/poi-ooxml-full-5.2.0.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/poi-ooxml-5.2.0.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/lib/commons-codec-1.15.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/lib/commons-collections4-4.4.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/lib/commons-io-2.11.0.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/lib/commons-math3-3.6.1.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/lib/log4j-api-2.17.1.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/ooxml-lib/xmlbeans-5.0.3.jar!/" />
+      <root url="jar://D:/Java/poi-bin-5.2.0/ooxml-lib/commons-compress-1.21.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://D:/Java/commons-lang3-3.12.0/apidocs" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
