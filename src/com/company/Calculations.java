@@ -23,7 +23,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             mean[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", mean);
+        lhm.put("Среднее арифметическое", mean);
     }
 
     // 3.	Рассчитать оценку стандартного отклонения для каждой выборки
@@ -32,7 +32,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             variance[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", variance);
+        lhm.put("Стандартное отклонение", variance);
     }
 
     // 4.	Рассчитать размах каждой выборки
@@ -41,7 +41,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             range[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", range);
+        lhm.put("Размах", range);
     }
 
     // 5.	Рассчитать коэффициенты ковариации для всех пар случайных чисел
@@ -50,7 +50,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             covariance[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", covariance);
+        lhm.put("Коэффициенты ковариации", covariance);
     }
 
     // 6.	Рассчитать количество элементов в каждой выборке
@@ -59,7 +59,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             number[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", number);
+        lhm.put("Количество элементов", number);
     }
 
     // 7.	Рассчитать коэффициент вариации для каждой выборки
@@ -68,7 +68,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             variation[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", variation);
+        lhm.put("Коэффициент вариации", variation);
     }
 
     // 8.	Рассчитать для каждой выборки построить доверительный интервал для мат. ожидания
@@ -77,7 +77,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             interval[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", interval);
+        lhm.put("Доверительный интервал", interval);
     }
 
     // 9.	Рассчитать оценку дисперсии для каждой выборки
@@ -86,7 +86,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             dispersion[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", dispersion);
+        lhm.put("Оценка дисперсии", dispersion);
     }
 
     // 10.	Рассчитать максимумы для каждой выборки
@@ -95,7 +95,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             max[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", max);
+        lhm.put("Максимумы", max);
     }
 
     // 11.	Рассчитать минимумы для каждой выборки
@@ -104,7 +104,7 @@ public class Calculations {
         for (int i = 0; i < 3; i++) {
             min[i] = StatUtils.geometricMean(arr[i]);
         }
-        lhm.put("Среднее геометрическое", min);
+        lhm.put("Минимумы", min);
     }
 
 }
