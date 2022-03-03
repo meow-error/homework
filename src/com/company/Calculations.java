@@ -1,7 +1,6 @@
 package com.company;
 
 import org.apache.commons.math3.stat.StatUtils;
-
 import java.util.LinkedHashMap;
 
 public class Calculations {
