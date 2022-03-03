@@ -26,10 +26,5 @@ public class Main {
         }
         workbook.close();
 
-        LinkedHashMap<String,Integer> lhm = new LinkedHashMap<>();
-        lhm.put("sdf",123);
-        Set<String> a =  lhm.keySet();
-        System.out.println(a.getClass());
-
     }
 }
