@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
+import java.util.Set;
 
 public class Main {
 
@@ -24,5 +25,11 @@ public class Main {
             }
         }
         workbook.close();
+
+        LinkedHashMap<String,Integer> lhm = new LinkedHashMap<>();
+        lhm.put("sdf",123);
+        Set<String> a =  lhm.keySet();
+        System.out.println(a.getClass());
+
     }
 }
