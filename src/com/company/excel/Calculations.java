@@ -66,11 +66,11 @@ public class Calculations {
 
     // 7.	Рассчитать коэффициент вариации для каждой выборки
     private static void variation(double[][] arr) {
-        Double[] variance = new Double[3];
+        Double[] variation = new Double[3];
         for (int i = 0; i < 3; i++) {
-            variance[i] = Math.sqrt(StatUtils.variance(arr[i])) / Math.abs(StatUtils.mean(arr[i]));
+            variation[i] = Math.sqrt(StatUtils.variance(arr[i])) / Math.abs(StatUtils.mean(arr[i]));
         }
-        lhm.put("Коэффициент вариации", variance);
+        lhm.put("Коэффициент вариации", variation);
     }
 
     // 8.	Рассчитать для каждой выборки построить доверительный интервал для мат. ожидания
