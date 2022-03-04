@@ -59,7 +59,7 @@ public class Calculations {
     private static void number(double[][] arr) {
         Double[] number = new Double[3];
         for (int i = 0; i < 3; i++) {
-            number[i] = Double.valueOf(arr[i].length);
+            number[i] = (double) arr[i].length;
         }
         lhm.put("Количество элементов", number);
     }
