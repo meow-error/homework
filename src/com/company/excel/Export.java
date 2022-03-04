@@ -22,6 +22,8 @@ public class Export {
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet(surname);
 
+        sheet.setColumnWidth(0,7500);
+
         XSSFRow row0 = sheet.createRow(0);
         row0.createCell(1, CellType.STRING).setCellValue("X");
         row0.createCell(2, CellType.STRING).setCellValue("Y");
