@@ -15,6 +15,7 @@ public class GUI extends JFrame{
     private JTextField importField;
     private JTextField exportField;
     private JPanel panel;
+    private JButton exitButton;
 
     public GUI() {
 
@@ -30,8 +31,9 @@ public class GUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 try {
                     Calculations.calc(Import.arr(importField.getText()));
+                    JOptionPane.showMessageDialog(null,"Файл загружен","Import",JOptionPane.PLAIN_MESSAGE);
                 } catch (IOException ex) {
-                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(null,ex.getMessage(),"Error",JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
@@ -41,9 +43,17 @@ public class GUI extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 try {
                     Export.export(Calculations.lhm, exportField.getText());
+                    JOptionPane.showMessageDialog(null,"Файл сохранен","Export",JOptionPane.PLAIN_MESSAGE);
                 } catch (IOException ex) {
-                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(null,ex.getMessage(),"Error",JOptionPane.PLAIN_MESSAGE);
                 }
+            }
+        });
+
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(1);
             }
         });
     }
