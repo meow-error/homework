@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class Export {
 
-    public static void export(LinkedHashMap lhm) throws IOException {
+    public static void export(LinkedHashMap lhm, String path) throws IOException {
 
         String surname = "Левадний";
 
@@ -40,7 +40,7 @@ public class Export {
             i++;
         }
 
-        String path = "C:\\fileExcelExport.xlsx";
+        //String path = "C:\\fileExcelExport.xlsx";
         File file = new File(path);
         workbook.write(new FileOutputStream(file));
         workbook.close();

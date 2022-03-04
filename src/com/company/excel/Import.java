@@ -7,9 +7,10 @@ import java.io.IOException;
 
 public class Import {
 
-    public static double[][] arr() throws IOException {
+    public static double[][] arr(String path) throws IOException {
 
-        XSSFWorkbook workbook = new XSSFWorkbook("C:\\Users\\user\\IdeaProjects\\homework2\\info\\condition.xlsx");
+        //path = "C:\\Users\\user\\IdeaProjects\\homework2\\info\\condition.xlsx";
+        XSSFWorkbook workbook = new XSSFWorkbook(path);
 
         int variant = 7; // Номер варианта
         XSSFSheet sheet = workbook.getSheetAt(variant - 1);
