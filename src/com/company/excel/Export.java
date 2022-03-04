@@ -1,4 +1,4 @@
-package com.company;
+package com.company.excel;
 
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -15,15 +15,18 @@ import java.util.Set;
 
 public class Export {
 
-    public void export(LinkedHashMap lhm) throws IOException {
+    public static void export(LinkedHashMap lhm) throws IOException {
 
         XSSFWorkbook workbook = new XSSFWorkbook();
         String surname = "Левадний";
         XSSFSheet sheet = workbook.createSheet(surname);
-
+        XSSFRow row0 = sheet.createRow(0);
+        row0.createCell(1, CellType.STRING).setCellValue("X");
+        row0.createCell(2, CellType.STRING).setCellValue("Y");
+        row0.createCell(3, CellType.STRING).setCellValue("Z");
         Set set = lhm.entrySet();
         Iterator iterator = set.iterator();
-        int i = 0;
+        int i = 1;
         while (iterator.hasNext()) {
             XSSFRow row = sheet.createRow(i);
             Map.Entry data = (Map.Entry) iterator.next();

@@ -1,27 +1,18 @@
 package com.company;
 
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import com.company.excel.Calculations;
+import com.company.excel.Export;
+import com.company.excel.Import;
 
 import java.io.IOException;
+
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        XSSFWorkbook workbook = new XSSFWorkbook("C:\\Users\\user\\IdeaProjects\\homework2\\info\\condition.xlsx");
-
-        int variant = 7; // Номер варианта
-        XSSFSheet sheet = workbook.getSheetAt(variant - 1);
-
-
-        double[][] arr = new double[3][sheet.getLastRowNum()];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 1; j <= sheet.getLastRowNum(); j++) {
-                arr[i][j - 1] = sheet.getRow(j).getCell(i).getNumericCellValue();
-            }
-        }
-        workbook.close();
+        Calculations.calc(Import.arr());
+        Export.export(Calculations.lhm);
 
     }
 }
