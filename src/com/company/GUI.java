@@ -20,7 +20,7 @@ public class GUI extends JFrame{
     public GUI() {
 
         setContentPane(panel);
-        setTitle("Lab1_V7");
+        setTitle("Lab2_V7");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         setSize(1000,500);
@@ -32,8 +32,8 @@ public class GUI extends JFrame{
                 try {
                     Calculations.calc(Import.arr(importField.getText()));
                     JOptionPane.showMessageDialog(null,"Файл загружен","Import",JOptionPane.PLAIN_MESSAGE);
-                } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(null,ex.getMessage(),"Error",JOptionPane.PLAIN_MESSAGE);
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null,"Ошибка в пути файла","Error",JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
@@ -44,8 +44,8 @@ public class GUI extends JFrame{
                 try {
                     Export.export(Calculations.lhm, exportField.getText());
                     JOptionPane.showMessageDialog(null,"Файл сохранен","Export",JOptionPane.PLAIN_MESSAGE);
-                } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(null,ex.getMessage(),"Error",JOptionPane.PLAIN_MESSAGE);
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null,"Ошибка в пути файла","Error",JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
