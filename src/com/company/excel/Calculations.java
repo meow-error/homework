@@ -44,7 +44,7 @@ public class Calculations {
     }
 
     // --5.	Рассчитать коэффициенты ковариации для всех пар случайных чисел
-    private static void covarience(double[][] arr) {
+    private static void covariance(double[][] arr) {
         Double[] covariance = new Double[3];
         for (int i = 0; i < 3; i++) {
             covariance[i] = StatUtils.geometricMean(arr[i]);
@@ -111,7 +111,7 @@ public class Calculations {
         mean(arr);
         variance(arr);
         range(arr);
-        covarience(arr);
+        covariance(arr);
         number(arr);
         variation(arr);
         interval(arr);

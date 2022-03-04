@@ -17,13 +17,16 @@ public class Export {
 
     public static void export(LinkedHashMap lhm) throws IOException {
 
-        XSSFWorkbook workbook = new XSSFWorkbook();
         String surname = "Левадний";
+
+        XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet(surname);
+
         XSSFRow row0 = sheet.createRow(0);
         row0.createCell(1, CellType.STRING).setCellValue("X");
         row0.createCell(2, CellType.STRING).setCellValue("Y");
         row0.createCell(3, CellType.STRING).setCellValue("Z");
+
         Set set = lhm.entrySet();
         Iterator iterator = set.iterator();
         int i = 1;
@@ -31,7 +34,6 @@ public class Export {
             XSSFRow row = sheet.createRow(i);
             Map.Entry data = (Map.Entry) iterator.next();
             row.createCell(0, CellType.STRING).setCellValue((String) data.getKey());
-            Double[] mas = (Double[]) data.getValue();
             for (int j = 0; j < 3; j++) {
                 row.createCell(j + 1, CellType.NUMERIC).setCellValue(((Double[]) data.getValue())[j]);
             }
