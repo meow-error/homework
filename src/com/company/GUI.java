@@ -7,9 +7,8 @@ import com.company.excel.Import;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 
-public class GUI extends JFrame{
+public class GUI extends JFrame {
     private JButton importFileButton;
     private JButton exportFileButton;
     private JTextField importField;
@@ -19,21 +18,25 @@ public class GUI extends JFrame{
 
     public GUI() {
 
+        Calculations calc = new Calculations();
+        Import imp = new Import();
+        Export exp = new Export();
+
         setContentPane(panel);
         setTitle("Lab2_V7");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
-        setSize(1000,500);
+        setSize(1000, 500);
 
 
         importFileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Calculations.calc(Import.arr(importField.getText()));
-                    JOptionPane.showMessageDialog(null,"Файл загружен","Import",JOptionPane.PLAIN_MESSAGE);
+                    calc.calc(imp.arr(importField.getText()));
+                    JOptionPane.showMessageDialog(null, "Файл загружен", "Import", JOptionPane.PLAIN_MESSAGE);
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(null,"Ошибка в пути файла","Error",JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Ошибка в пути файла", "Error", JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
@@ -42,10 +45,10 @@ public class GUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Export.export(Calculations.lhm, exportField.getText());
-                    JOptionPane.showMessageDialog(null,"Файл сохранен","Export",JOptionPane.PLAIN_MESSAGE);
+                    exp.export(calc.lhm, exportField.getText());
+                    JOptionPane.showMessageDialog(null, "Файл сохранен", "Export", JOptionPane.PLAIN_MESSAGE);
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(null,"Ошибка в пути файла","Error",JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Ошибка в пути файла", "Error", JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
@@ -58,11 +61,10 @@ public class GUI extends JFrame{
         });
     }
 
+
     public static void main(String[] args) {
 
         new GUI();
 
-        // СДЕЛАТЬ:
-        // Написать исключения для работы с ошибками
     }
 }

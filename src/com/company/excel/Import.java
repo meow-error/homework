@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Import {
 
-    public static double[][] arr(String path) throws IOException {
+    public double[][] arr(String path) throws IOException {
 
         //path = "C:\\Users\\user\\IdeaProjects\\homework2\\info\\condition.xlsx";
         XSSFWorkbook workbook = new XSSFWorkbook(path);

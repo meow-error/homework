@@ -15,14 +15,14 @@ import java.util.Set;
 
 public class Export {
 
-    public static void export(LinkedHashMap lhm, String path) throws IOException {
+    public void export(LinkedHashMap lhm, String path) throws IOException {
 
         String surname = "Левадний";
 
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet(surname);
 
-        sheet.setColumnWidth(0,7500);
+        sheet.setColumnWidth(0, 7500);
 
         XSSFRow row0 = sheet.createRow(0);
         row0.createCell(1, CellType.STRING).setCellValue("X");
